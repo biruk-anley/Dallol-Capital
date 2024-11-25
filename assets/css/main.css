@@ -185,6 +185,51 @@ h6 {
   --nav-hover-color: #3c3c3c;
 }
 
+
+.headerr {
+  --background-color: rgba(255, 255, 255, 0.95);
+  --heading-color: #3c3c3c;
+  --nav-color: #3c3c3c;
+  --nav-hover-color: #3c3c3c;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.headerr .logo img {
+  max-height: 150px;
+  margin-right: 8px;
+}
+
+.headerr .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.headerr .logo span {
+  font-size: 24px;
+  padding-left: 1px;
+  font-family: var(--heading-font);
+  color: var(--color-primary);
+}
+
+.scrolled .headerr {
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Header on Scroll
+------------------------------*/
+.scrolled .headerr {
+  --background-color: rgba(255, 255, 255, 0.95);
+  --heading-color: #3c3c3c;
+  --nav-color: #3c3c3c;
+  --nav-hover-color: #3c3c3c;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1140,7 +1185,7 @@ section,
 --------------------------------------------------------------*/
 .alt-services .features-image {
   position: relative;
-  min-height: 400px;
+  min-height: 100px;
 }
 
 .alt-services .features-image img {
@@ -1149,14 +1194,14 @@ section,
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   z-index: 1;
 }
 
 .alt-services h3 {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 20px;
+  
   padding-bottom: 20px;
   position: relative;
 }
@@ -1172,9 +1217,12 @@ section,
   bottom: 0;
 }
 
-.alt-services .icon-box {
+.alt-services .icon-box:not(:first-of-type) {
   margin-top: 50px;
 }
+
+
+
 
 .alt-services .icon-box i {
   color: var(--accent-color);
@@ -1797,6 +1845,7 @@ section,
   font-size: 14px;
   margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Team Section
